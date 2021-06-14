@@ -1,0 +1,21 @@
+/* .goods-display img{
+    width:50%;
+    margin-bottom: 20px;
+} */
+
+
+@media (max-width:1200px) {
+
+}
+
+@media (max-width:1000px) {
+
+}
+
+
+
+@media(max-width:750px){
+ .deal{
+     text-align: center;
+ }
+}

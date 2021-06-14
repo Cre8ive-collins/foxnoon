@@ -10,7 +10,7 @@
     <nav>
       <div class="navbar" style="padding:14px 0px">
         <div class="logo">
-          <div class="logo-f" style="font-size: 30px; color:white; font-weight: bold;"><span style="color:#000">FOX</span>NOON</div>
+          <div class="logo-f" style="font-size: 25px; color:white; font-weight: bold;"><a style="text-decoration: none; color: #fff;" href="/"><span style="color:#000">FOX</span>NOON</a></div>
         </div>
         <div class="item search right">
           <div class="search-group">
@@ -21,13 +21,13 @@
               <option value="all">Winter</option>
               <option value="all">Summer</option>
             </select>
-            <input type="text" style="padding:10px" placeholder="I'm shopping for...">
+            <input type="text" style="padding:5px" placeholder="I'm shopping for...">
           </div>
-          <button class="search-button" style="padding: 0px 40px">Search</button>
+          <button class="search-button" style="padding: 0px 20px; font-size: 12px;">Search</button>
         </div>
         
         <div class="icon" style="display: flex;">
-          <a href="" class="  item" style="font-size: 30px;">
+          <a href="" class="  item" style="font-size: 20px;">
             <div class="group" style="padding-right: 15px; padding-top: 2px;">
               <i class="far fa-heart"></i>
             </div>
@@ -40,15 +40,15 @@
           </a>
     
     
-          <a href="" class="  item">
+          <div class="item" (click)="LoginUser()" style="cursor:pointer">
             <div class="group">
               <i style="font-size: 30px;" class="fas fa-user-alt"></i>
-              <div class="detail" style="font-weight: 700; font-size: 15px; padding-left:5px">
-                Login
-                <div class="sub" style="font-weight: 700; font-size: 15px; padding-left:5px">Register</div>
+              <div class="detail" style="font-weight: 700; font-size: 12px; padding-left:7px">
+                  Login
+                <div class="sub" style="font-weight: 700; font-size: 12px; padding-left:5px">Register</div>
               </div>
             </div>
-          </a>
+          </div>
         </div>
   
         <!-- small screen -->
@@ -74,11 +74,9 @@
       </div>
     </nav>
 
-
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script> 
  
 
-
-
 <router-outlet></router-outlet>
+<!-- <app-footer></app-footer> -->

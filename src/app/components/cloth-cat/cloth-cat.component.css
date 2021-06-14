@@ -1,0 +1,34 @@
+
+.category{
+    width:90%;
+    max-width:1500px;
+    margin: auto;
+}
+
+
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    width: 98%;
+    padding-right: 2px;
+    padding-left: 2px;
+
+}
+
+
+@media(max-width:750px){
+
+
+    .nav-menu{
+        display: none;
+    }
+
+}
+
+@media(max-width:1200px){
+    .slider{
+        display: none;
+    }
+
+}
+
+
+

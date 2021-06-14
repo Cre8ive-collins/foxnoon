@@ -1,0 +1,12 @@
+.container{
+    width:90%;
+    max-width:1500px;
+    margin: auto;
+}
+
+
+.zoom:hover {
+    -ms-transform: scale(1); /* IE 9 */
+    -webkit-transform: scale(1); /* Safari 3-8 */
+    transform: scale(1.2); 
+  }
