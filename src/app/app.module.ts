@@ -17,6 +17,7 @@ import { NavComponent } from './components/nav/nav.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { LoginComponent } from './auth/login/login.component';
 import { CreateaccountComponent } from './auth/createaccount/createaccount.component';
+import { SwiperModule } from 'swiper/angular';
 
 
 @NgModule({
@@ -40,7 +41,8 @@ import { CreateaccountComponent } from './auth/createaccount/createaccount.compo
     BrowserAnimationsModule,
     MatSliderModule,
     MatSidenavModule,
-
+    SwiperModule
+ 
   ],
   providers: [],
   bootstrap: [AppComponent]

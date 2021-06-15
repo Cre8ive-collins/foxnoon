@@ -12,4 +12,7 @@ export class DealComponent implements OnInit {
   ngOnInit(): void {
   }
 
+
+  
+
 }

@@ -17,16 +17,18 @@
 @media(max-width:750px){
 
 
-    .nav-menu{
-        display: none;
-    }
-
+ 
 }
 
 @media(max-width:1200px){
     .slider{
         display: none;
     }
+
+    .nav-menu{
+        display: none;
+    }
+
 
 }
 
