@@ -131,6 +131,10 @@ nav{
   display: none !important;
 }
 
+.cancel:hover{
+  color:red
+}
+
 
 .search-button{
   border: none;
@@ -271,6 +275,46 @@ nav{
 
 
 }
+
+.sidebar {
+  background: #fff;
+  height: 100%;
+  width: 0;
+  position: fixed; 
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  /* padding-top: 60px; */
+  transition: 0.5s; 
+}
+.showsidebar {
+  width: 300px;
+  box-shadow:0 0 0 10000px rgba(0,0,0,.50);
+}
+.hidesidebar {
+  width: 0px;
+}
+
+body.push {
+  left:250px;
+}
+
+
+.menu i{
+  padding-right:20px;
+}
+
+.menu:hover{
+  background-color: #fcb800;
+}
+
+.row>* {
+  padding-right: 0px;
+  padding-left: 0px;
+}
+
+
 
 
 

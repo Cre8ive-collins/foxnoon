@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener, ElementRef  } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -9,7 +9,11 @@ import { Router } from '@angular/router';
 
 })
 export class AppComponent {
-  constructor(private router : Router) { }
+
+  sideBarOpen: boolean = false;
+
+  constructor(private router : Router,
+    ) { }
 
   ngOnInit(): void {
   }
@@ -17,4 +21,15 @@ export class AppComponent {
   LoginUser(){
     this.router.navigate(["login"]);
   }
+
+  toggleSideBar(){
+    document.getElementsByClassName('sidebar')[0].classList.add('showsidebar');
+    this.sideBarOpen = true;
+  }
+
+  removeSideBar(){
+    document.getElementsByClassName('sidebar')[0].classList.remove('showsidebar');
+    this.sideBarOpen = false;
+  }
+
 }
