@@ -1,0 +1,25 @@
+.menu i{
+    padding-right:20px;
+}
+
+.menu:hover{
+    background-color: #fcb800;
+}
+
+.row>* {
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+
+
+@media (max-width:1200px) {
+
+    .main-menu{
+        visibility: hidden;
+    }
+
+    .slider-pic{
+        display: none;
+    }
+}

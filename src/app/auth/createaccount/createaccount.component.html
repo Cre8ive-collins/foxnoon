@@ -1,0 +1,59 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<div class="global-container">
+	<div class="card login-form">
+	<div class="card-body">
+		<h3 class="card-title text-center" style="font-size: 30px; font-weight: bold; ">SignUp</h3>
+		<div class="card-text">
+			<form>
+                <div class="row">
+                    <div class="col-md-6" style="padding:0px 5px !important;"> 
+                        <div class="form-group">
+                            <input type="text" class="form-control form-control-sm" placeholder="First Name" id="firstname">
+                        </div>
+                    </div>
+                    <div class="col-md-6" style="padding:0px 5px !important;">
+                        <div class="form-group">
+                            <input type="text" class="form-control form-control-sm" id="lastname" placeholder="Last Name">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12" style="padding:0px 5px !important;">
+                        <div class="form-group" >
+                            <input type="email" class="form-control form-control-sm" id="exampleInputEmail1"  placeholder="Email address" aria-describedby="emailHelp">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12" style="padding:0px 5px !important;">
+                        <div class="form-group" >
+                            <input type="password" class="form-control form-control-sm" id="password" placeholder="Password" aria-describedby="emailHelp">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12" style="padding:0px 5px !important;">
+                        <div class="form-group" >
+                            <input type="password" class="form-control form-control-sm" id="confirmpassword" placeholder=" Confirm Password" aria-describedby="emailHelp">
+                        </div>
+                    </div>
+                </div>
+                <div style="display: flex;">
+                    <div style="padding-right:10px"><input id="checkid2" type="checkbox" value="test"></div>
+                    <div>I accept the <a href="https://www.google.com/">Terms of Use</a> & <a href="https://www.google.com/">Privacy Policy.</a></div>
+                </div>
+				<button type="submit" class="btn btn-warning btn-block">REGISTER</button>
+				
+				<div class="sign-up" style="display: flex;">
+					You have an account? <div class="px-4" style="text-decoration: underline; color:blue; cursor: pointer;" (click)="login()">Login</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+</div>
+<app-footer></app-footer>

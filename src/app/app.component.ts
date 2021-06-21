@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, HostListener, ElementRef  } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -8,5 +9,27 @@ import { Component } from '@angular/core';
 
 })
 export class AppComponent {
-  title = 'foxnoon';
+
+  sideBarOpen: boolean = false;
+
+  constructor(private router : Router,
+    ) { }
+
+  ngOnInit(): void {
+  }
+
+  LoginUser(){
+    this.router.navigate(["login"]);
+  }
+
+  toggleSideBar(){
+    document.getElementsByClassName('sidebar')[0].classList.add('showsidebar');
+    this.sideBarOpen = true;
+  }
+
+  removeSideBar(){
+    document.getElementsByClassName('sidebar')[0].classList.remove('showsidebar');
+    this.sideBarOpen = false;
+  }
+
 }
