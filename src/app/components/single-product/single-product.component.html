@@ -1,19 +1,23 @@
 <div class="containter">
     <div>
         <div class="row">
-            <div class="col-md-5">
-                <div class="row">
+            <div class="col-md-2">
+                <div class="row" *ngFor = "let image of product.imageUrl; let i = index">
                     <div>
-                        <div style="text-align: center;"><img src="../../assets/stick.jpg"></div>
+                        <div><img width="20%" [src]= "image" (mouseenter)="displayImg = i"></div>
+                        
                     </div>
                     <!-- <div>hello</div> -->
                 </div>
             </div>
-            <div class="col-md-7">
+            <div class="col-md-5">
+                <img [src]="product.imageUrl[displayImg]" alt="">
+            </div>
+            <div class="col-md-5">
                 <div style="margin-top:50px">
-                    <h3 style="font-size: 1.5rem; margin: 5px !important">Ciate Palemore Lipstick Bold Red Color</h3>
+                    <h3 style="font-size: 1.5rem; margin: 5px !important">{{product.name}}</h3>
                     <div style="display: flex;">
-                        <div style="color:gray; font-size:13px; padding-left:7px">Brand: <a href="">Baxter</a></div>
+                        <div style="color:gray; font-size:13px; padding-left:7px">Description: <a href="">{{product.description}}</a></div>
                         <div style="text-align: left; color:#fcb800; font-size: 13px; margin-left:30px; margin-right:15px">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -30,7 +34,7 @@
                 </div>
 
                 <div style="display:flex; margin-top: 20px;">
-                    <div style="color: red; font-size: 20px; font-weight:bold; margin-right:10px">$42.33</div>
+                    <div style="color: red; font-size: 20px; font-weight:bold; margin-right:10px">{{product.price | currency }}</div>
                     <div style="margin-right: 10px; color:gray; padding-top:4px"><del>$787.99</del></div>
                     <div style="color:#ff6329; padding-top:4px">(-37%)</div>
                 </div>
@@ -53,13 +57,13 @@
                     <div class="row" style="margin-top: 30px;">
                         <div class="col-md-3" style="padding:0px !important">
                             <div style="display: flex; width:100px; padding: 10px 0px; font-size:16px; justify-content: space-evenly;  border: 1px solid black">
-                                <div style="cursor: pointer; font-size:35px" (click)="decreaseValue()">-</div>
-                                <div>{{currentNumber}} </div>
-                                <div style="cursor: pointer;  font-size:20px" (click)="increaseValue()">+</div>
+                                <div style="cursor: pointer; font-size:35px" (click)="decreaseValue(product)">-</div>
+                                <div>{{product.qty}}</div>
+                                <div style="cursor: pointer;  font-size:20px" (click)="increaseValue(product)">+</div>
                             </div>
                         </div>
                         <div class="col-md-3" style="padding:0px !important; margin:0px !important">
-                            <div><button style="border-radius: 0px; font-size: 120%;" type="button" class="btn btn-dark btn-lg">Add to cart</button></div>
+                            <div><button (click)="addToCart(product)"style="border-radius: 0px; font-size: 120%;" type="button" class="btn btn-dark btn-lg">Add to cart</button></div>
                         </div>
 
                         <div class="col-sm-4" style="padding:0px !important">
@@ -74,7 +78,7 @@
         </div>
     </div>
 
-
+    
     <div style="background-color:#fff; margin: 0px 30px; margin-top:60px">
         <div class="uk-position-relative uk-">
 
@@ -246,6 +250,7 @@
         </div>
     </div>
 
-    
-    <app-footer></app-footer>
+
 </div>
+
+<app-footer></app-footer>
