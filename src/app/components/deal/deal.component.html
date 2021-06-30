@@ -7,18 +7,21 @@
 
         <div class="container">
             <div class="row">
-                <div class="col">
+                <div class="col" *ngFor="let product of productList">
                     <div class="goods-display">
-                        <img style="width: 60%"  src="../../assets/chair.jpg">
+                        <div>  
+                            <img style="width: 60%" class="image" [routerLink]="[ './singleproduct', product.id]" src="{{product.imageUrl[0]}}">
+                        </div>
                         <div style="display:flex; margin-left:30px; font-size: 15px;">
-                            <p style="padding-right:10px; color: green; font-weight: bold">$569.99</p>
+                            <p style="padding-right:10px; color: green; font-weight: bold">${{product.price}}</p>
                             <p style="padding-right:10px; color: rgb(174, 169, 169); font-weight: bold"><del>$787.99</del></p>
                             <p style="padding-right:10px; color: #f4703d; font-weight: bold; font-size: 13px !important;">16% off</p>
                         </div>
                         <p style="text-align: left; text-decoration: none; margin-left:30px;">
-                            <a href="" style="text-decoration: none;">See how katie sowers, Asst.</a>
+                            <a href="" style="text-decoration: none;">{{product.description}}</a>
                         </p>
-                        <div style="text-align: left; margin-left:30px; ">Sold By: YOUNG BOYS </div>
+                        
+                        <!-- <div style="text-align: left; margin-left:30px; "><button (click)="handleAddToCart()">Add to Cart</button></div> -->
                         <div>
                             <div style="text-align: left; color:#fcb800; font-size: 10px; margin-left:30px;">
                                 <i class="fas fa-star"></i>
@@ -34,7 +37,7 @@
 
 
             <!-- second col -->
-         <div class="col">
+         <!-- <div class="col">
                 <div class="goods-display">
                     <img style="width: 60%"  src="../../assets/cream.jpg">
                     <div style="display:flex; margin-left:30px; font-size: 15px;">
@@ -57,10 +60,10 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
             <!-- third col -->
-             <div class="col">
+             <!-- <div class="col">
                 <div class="goods-display">
                     <img style="width: 60%; cursor: pointer;" [routerLink]="[ './singleproduct']" src="../../assets/stick.jpg">
                     <div style="display:flex; margin-left:30px; font-size: 15px;">
@@ -83,10 +86,12 @@
                         </div>
                     </div>
                 </div>
-            </div> 
+            </div>  -->
+
+           
 
             <!-- forth col -->
-            <div class="col">
+            <!-- <div class="col">
                 <div class="goods-display">
                     <img style="width: 60%" src="../../assets/pulse.jpg">
                     <div style="display:flex; margin-left:30px; font-size: 15px;">
@@ -109,7 +114,7 @@
                         </div>
                     </div>
                 </div>
-            </div> 
+            </div>  -->
         </div>
     </div>
 </div> 

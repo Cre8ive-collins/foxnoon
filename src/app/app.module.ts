@@ -18,8 +18,9 @@ import { FooterComponent } from './components/footer/footer.component';
 import { LoginComponent } from './auth/login/login.component';
 import { CreateaccountComponent } from './auth/createaccount/createaccount.component';
 import { SwiperModule } from 'swiper/angular';
-import { SingleProductComponent } from './single-product/single-product.component';
+import { SingleProductComponent } from './components/single-product/single-product.component';
 import { RatingModule } from 'ng-starrating';
+import { CartItemComponent } from './cart-item/cart-item.component';
 
 
 @NgModule({
@@ -37,6 +38,7 @@ import { RatingModule } from 'ng-starrating';
     LoginComponent,
     CreateaccountComponent,
     SingleProductComponent,
+    CartItemComponent,
   ],
   imports: [
     BrowserModule,

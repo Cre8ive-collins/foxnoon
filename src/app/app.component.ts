@@ -1,3 +1,4 @@
+import { AddToCartService } from './services/add-to-cart.service';
 import { Component, HostListener, ElementRef  } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -11,11 +12,25 @@ import { Router } from '@angular/router';
 export class AppComponent {
 
   sideBarOpen: boolean = false;
+  cart:number = 0;
 
-  constructor(private router : Router,
-    ) { }
+  constructor(
+    private router : Router,
+    private addToCartService: AddToCartService
+    ) { 
+      this.addToCartService.cartSubject.subscribe(data =>{
+        this.cart = data;
+    }) }
 
   ngOnInit(): void {
+    this.cartItemFunc();
+  }
+
+  cartItemFunc(){
+    if(localStorage.getItem('cart') != null){
+      var cartCount = JSON.parse(localStorage.getItem('cart'));
+      this.cart = cartCount.length;
+    }
   }
 
   LoginUser(){
